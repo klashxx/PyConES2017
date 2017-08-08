@@ -1,0 +1,45 @@
+version: '2'
+services:
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./nginx/conf/:/etc/nginx/conf.d
+    volumes_from:
+      - sysgate
+    ports:
+      - "80:80"
+    depends_on:
+      - sysgate
+    links:
+      - sysgate:sysgate
+
+  sysgate:
+     restart: always
+     build: ./web/
+     ports:
+       - "8000:8000"
+     volumes:
+       - /static
+     depends_on:
+       - postgres
+     links:
+       - postgres:postgres
+
+  postgres:
+    restart: always
+    image: postgres:alpine
+    ports:
+      - "5432:5432"
+    volumes_from:
+      - pg_data
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      PGDATA: /var/lib/postgresql/sysgate/pgdata
+
+  pg_data:
+    image: alpine:latest
+    volumes:
+      - ~/PostgreSQL/sysgate:/var/lib/postgresql/data:z
+    command: "true"
