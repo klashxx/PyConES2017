@@ -65,32 +65,6 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'urls'
 
-# TEMPLATES = [
-#     {
-#         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-#         'DIRS': [],
-#         'APP_DIRS': True,
-#         'OPTIONS': {
-#             'context_processors': [
-#                 'django.template.context_processors.debug',
-#                 'django.template.context_processors.request',
-#                 'django.contrib.auth.context_processors.auth',
-#                 'django.contrib.messages.context_processors.messages',
-#             ],
-#         },
-#     },
-# ]
-
-
-# No se si es necesario
-"""
-dirs is a list of directories where the engine should look for template source files. It is used to configure filesystem.Loader.
-
-It defaults to an empty list.
-
-app_dirs only affects the default value of loaders. See below.
-"""
-
 loaders = [
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader']
