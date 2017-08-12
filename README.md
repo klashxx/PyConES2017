@@ -31,7 +31,7 @@ En cada rama se detallan las instrucciones de instalación.
 
 #### Instalación
 
-Branch: **01_auth**
+Branch: [`01_auth`](https://github.com/klashxx/PyConES2017/tree/01_auth)
 
 ```
 $ git clone https://github.com/klashxx/PyConES2017.git sysgate
