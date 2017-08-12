@@ -4,6 +4,7 @@ from django.contrib.auth import authenticate
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.views import login as django_login
 from django.shortcuts import redirect, render
+from django.views.generic import View
 
 from .forms import LoginForm, RegistroForm
 
@@ -36,3 +37,8 @@ def registro(request):
     else:
         form = RegistroForm()
     return render(request, 'account/registro.html', {'form': form})
+
+
+class Home(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, 'account/home.html')
