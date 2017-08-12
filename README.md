@@ -25,6 +25,8 @@ En cada rama se detallan las instrucciones de instalación.
 
 [01](#usuarios). Usuarios
 
+[02](#aplicaciones). Aplicaciones
+
 <br>
 
 ### 01. Usuarios
@@ -44,6 +46,12 @@ $ docker-compose -f docker-compose.yml exec sysgate python manage.py createsuper
 ```
 
 [![usuarios][asciicast-01_auth-png]][asciicast-01_auth-url]
+
+### 02. Aplicaciones
+
+#### Instalación
+
+Branch: [`02_apps`](https://github.com/klashxx/PyConES2017/tree/02_apps)
 
 
 ### Contacta conmigo
