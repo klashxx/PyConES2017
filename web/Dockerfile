@@ -4,7 +4,6 @@ ENV PYTHONUNBUFFERED 1
 RUN mkdir /sysgate /config
 ADD ./requirements.txt /config/
 RUN pip3 install --no-cache-dir -r /config/requirements.txt
-EXPOSE 450
 ADD . /sysgate/
 WORKDIR /sysgate/
 ENV PYTHONPATH /sysgate/sysgate
