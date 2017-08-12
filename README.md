@@ -52,7 +52,7 @@ Mis perfiles online están [**aquí**](https://klashxx.github.io/about), no te c
 
 <h6 align="center">
 <a href="https://2017.es.pycon.org/es/schedule/sysadmin-vs-django/">
-  <img src="https://github.com/klashxx/PyConES17/blob/web/sysgate/static/img/logo_pycones17.png">
+  <img src="https://github.com/klashxx/PyConES2017/blob/01_auth/web/sysgate/static/img/logo_pycones17.png">
 </a></h6>
 <br>
 <h6 align="center">Made with :heart: in Almería, Spain.</h6>
