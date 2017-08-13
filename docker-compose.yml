@@ -30,16 +30,9 @@ services:
     image: postgres:alpine
     ports:
       - "5432:5432"
-    volumes_from:
-      - pg_data
+    volumes:
+       - ~/data/postgresql:/var/lib/postgresql/data
     environment:
       POSTGRES_DB: postgres
       POSTGRES_PASSWORD: postgres
       POSTGRES_USER: postgres
-      PGDATA: /var/lib/postgresql/sysgate/pgdata
-
-  pg_data:
-    image: alpine:latest
-    volumes:
-      - ~/PostgreSQL/sysgate:/var/lib/postgresql/data:z
-    command: "true"
