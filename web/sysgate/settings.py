@@ -23,8 +23,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 PROJECT_DIR = Path(__file__).parent
 
-LOGIN_URL = '/'
-LOGIN_REDIRECT_URL = '/'
+LOGIN_URL = '/account/'
+LOGIN_REDIRECT_URL = '/account/'
 
 STATIC_ROOT = '/static/'
 
@@ -51,7 +51,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'account'
+    'account',
+    'apps.core',
 ]
 
 MIDDLEWARE = [

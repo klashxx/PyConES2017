@@ -1,0 +1,9 @@
+<h1>SYSGATE</h1>
+
+{% if user.is_authenticated %}
+  <p>Bienvenido al portal: <strong>{{request.user }}</strong></p>
+{% else %}
+  <p>Hola! Ser misterioso</p>
+{% endif %}
+
+<a href="{% url 'account' %}"><button>Gestión cuentas</button></a>
