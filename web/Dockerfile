@@ -8,6 +8,6 @@ ADD . /sysgate/
 WORKDIR /sysgate/
 ENV PYTHONPATH /sysgate/sysgate
 
-RUN python ./manage.py collectstatic
+RUN python ./manage.py collectstatic --noinput
 
 CMD ["gunicorn", "sysgate.wsgi", "--log-level=debug", "-w 2", "-b 0.0.0.0:8000"]
