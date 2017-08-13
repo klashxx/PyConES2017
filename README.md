@@ -37,13 +37,13 @@ Branch: [`01_auth`](https://github.com/klashxx/PyConES2017/tree/01_auth)
 $ git clone https://github.com/klashxx/PyConES2017.git sysgate
 $ cd sysgate
 $ git checkout 01_auth
+$ docker volume create --name=data
 $ docker-compose up -d
 $ docker-compose exec sysgate python manage.py migrate
 $ docker-compose exec sysgate python manage.py createsuperuser
 ```
 
 [![usuarios][asciicast-01_auth-png]][asciicast-01_auth-url]
-
 
 ### Contacta conmigo
 
@@ -60,5 +60,5 @@ Mis perfiles online están [**aquí**](https://klashxx.github.io/about), no te c
 [license-svg]: https://img.shields.io/badge/license-MIT-blue.svg
 [license-url]: https://opensource.org/licenses/MIT
 
-[asciicast-01_auth-png]: https://asciinema.org/a/133173.png
-[asciicast-01_auth-url]: https://asciinema.org/a/133173
+[asciicast-01_auth-png]: https://asciinema.org/a/133210.png
+[asciicast-01_auth-url]: https://asciinema.org/a/133210
