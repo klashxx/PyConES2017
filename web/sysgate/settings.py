@@ -26,6 +26,7 @@ PROJECT_DIR = Path(__file__).parent
 LOGIN_URL = '/account/'
 LOGIN_REDIRECT_URL = '/account/'
 
+STATIC_URL = '/static/'
 STATIC_ROOT = '/static/'
 
 STATICFILES_DIRS = (
