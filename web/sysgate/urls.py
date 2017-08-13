@@ -8,5 +8,6 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^', include('apps.core.urls', namespace='core')),
     url(r'^account/', include('account.urls'), name='Autenticación'),
+    url(r'^metrics/', include('apps.metrics.urls'), name='Métricas'),
     url(r'^admin/', admin.site.urls),
 ]

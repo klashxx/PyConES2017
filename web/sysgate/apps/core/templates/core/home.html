@@ -2,8 +2,12 @@
 
 {% if user.is_authenticated %}
   <p>Bienvenido al portal: <strong>{{request.user }}</strong></p>
+  <h3>Aplicaciones disponibles</h3>
+  <a href="{% url 'metrics:home' %}"><button>Métricas</button></a>
+  <br>
 {% else %}
   <p>Hola! Ser misterioso</p>
 {% endif %}
 
-<a href="{% url 'account' %}"><button>Gestión cuentas</button></a>
+<br>
+<a href="{% url 'account:home' %}"><button>Gestión cuentas</button></a>
