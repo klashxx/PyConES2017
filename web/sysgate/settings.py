@@ -32,6 +32,10 @@ STATICFILES_DIRS = (
     PROJECT_DIR.child('static'),
 )
 
+FIXTURE_DIRS = (
+    PROJECT_DIR.child('fixtures'),
+)
+
 # Cargando desde un fichero externo lo convertimos en realmente secreto
 SECRET_KEY = config('SECRET_KEY')
 
