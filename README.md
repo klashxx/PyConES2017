@@ -38,9 +38,9 @@ $ git clone https://github.com/klashxx/PyConES2017.git sysgate
 $ cd sysgate
 $ git checkout 01_auth
 $ docker-compose up -d
-$ docker-compose -f docker-compose.yml exec sysgate python manage.py makemigrations
-$ docker-compose -f docker-compose.yml exec sysgate python manage.py migrate
-$ docker-compose -f docker-compose.yml exec sysgate python manage.py createsuperuser
+$ docker-compose exec sysgate python manage.py makemigrations
+$ docker-compose exec sysgate python manage.py migrate
+$ docker-compose exec sysgate python manage.py createsuperuser
 ```
 
 [![usuarios][asciicast-01_auth-png]][asciicast-01_auth-url]
