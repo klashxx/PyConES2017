@@ -1,3 +1,14 @@
 <h1>Metrics App</h1>
 
-<p>Bienvenid@ a la aplicación de métricas {{request.user }}</p>
+<p>Bienvenid@ a la aplicación de métricas <strong>{{request.user }}</strong></p>
+
+<p>Disponibles:</p>
+
+<table style="border: 1px solid black;">
+{% for metrica in metricas %}
+  <tr>
+    <td>{{ metrica.nombre }}</td>
+    <td>{{ metrica.get_tipo_display }}</td>
+  </tr>
+{% endfor %}
+</table>
