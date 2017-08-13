@@ -1,11 +1,11 @@
 <h1>Gestión de cuentas</h1>
 
 {% if user.is_authenticated %}
-  <p>Hola! Te encuentra logead@ como: {{request.user }}</p>
   <a href="{% url 'logout' %}"><button>Logout</button></a>
   <a href="{% url 'password_change' %}"><button>Cambiar password</button></a>
 {% else %}
-  <p>Vaya!, eres un ser misterioso ...<p>
   <a href="{% url 'login' %}"><button>Login</button></a>
   <a href="{% url 'registro' %}"><button>Registro</button></a>
 {% endif %}
+
+<a href="{% url 'core:home' %}"><button>Home</button></a>
