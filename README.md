@@ -60,5 +60,5 @@ Mis perfiles online están [**aquí**](https://klashxx.github.io/about), no te c
 [license-svg]: https://img.shields.io/badge/license-MIT-blue.svg
 [license-url]: https://opensource.org/licenses/MIT
 
-[asciicast-01_auth-png]: https://asciinema.org/a/133060.png
-[asciicast-01_auth-url]: https://asciinema.org/a/133060
+[asciicast-01_auth-png]: https://asciinema.org/a/133173.png
+[asciicast-01_auth-url]: https://asciinema.org/a/133173
