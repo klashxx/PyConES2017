@@ -40,9 +40,8 @@ $ git clone https://github.com/klashxx/PyConES2017.git sysgate
 $ cd sysgate
 $ git checkout 01_auth
 $ docker-compose up -d
-$ docker-compose -f docker-compose.yml exec sysgate python manage.py makemigrations
-$ docker-compose -f docker-compose.yml exec sysgate python manage.py migrate
-$ docker-compose -f docker-compose.yml exec sysgate python manage.py createsuperuser
+$ docker-compose exec sysgate python manage.py migrate
+$ docker-compose exec sysgate python manage.py createsuperuser
 ```
 
 [![usuarios][asciicast-01_auth-png]][asciicast-01_auth-url]
@@ -53,6 +52,16 @@ $ docker-compose -f docker-compose.yml exec sysgate python manage.py createsuper
 
 Branch: [`02_apps`](https://github.com/klashxx/PyConES2017/tree/02_apps)
 
+```
+$ git checkout 02_apps
+$ docker-compose down
+$ docker-compose build
+$ docker-compose up -d
+$ docker-compose exec sysgate python manage.py migrate
+$ docker-compose exec sysgate python manage.py loaddata sysgate/fixtures/metrics.metrica.json
+```
+
+[![usuarios][asciicast-02_apps-png]][asciicast-02_apps-url]
 
 ### Contacta conmigo
 
@@ -71,3 +80,6 @@ Mis perfiles online están [**aquí**](https://klashxx.github.io/about), no te c
 
 [asciicast-01_auth-png]: https://asciinema.org/a/133060.png
 [asciicast-01_auth-url]: https://asciinema.org/a/133060
+
+[asciicast-02_apps-png]: https://asciinema.org/a/133179.png
+[asciicast-02_apps-url]: https://asciinema.org/a/133179
