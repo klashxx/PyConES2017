@@ -1,11 +1,11 @@
 <h1>Gestión de cuentas</h1>
 
 {% if user.is_authenticated %}
-  <a href="{% url 'account:logout' %}"><button>Logout</button></a>
-  <a href="{% url 'account:password_change' %}"><button>Cambiar password</button></a>
+  <a href="{% url 'logout' %}"><button>Logout</button></a>
+  <a href="{% url 'password_change' %}"><button>Cambiar password</button></a>
 {% else %}
-  <a href="{% url 'account:login' %}"><button>Login</button></a>
-  <a href="{% url 'account:registro' %}"><button>Registro</button></a>
+  <a href="{% url 'login' %}"><button>Login</button></a>
+  <a href="{% url 'registro' %}"><button>Registro</button></a>
 {% endif %}
 
 <a href="{% url 'core:home' %}"><button>Home</button></a>
