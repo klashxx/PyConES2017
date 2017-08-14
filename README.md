@@ -56,8 +56,8 @@ Branch: [`02_apps`](https://github.com/klashxx/PyConES2017/tree/02_apps)
 
 ```
 $ git checkout 02_apps
-$ docker-compose down
-$ docker-compose build
+$ docker-compose stop
+$ docker-compose build sysgate
 $ docker-compose up -d
 $ docker-compose exec sysgate python manage.py migrate
 $ docker-compose exec sysgate python manage.py loaddata sysgate/fixtures/metrics.metrica.json
@@ -70,6 +70,14 @@ $ docker-compose exec sysgate python manage.py loaddata sysgate/fixtures/metrics
 #### Instalación
 
 Branch: [`03_drf`](https://github.com/klashxx/PyConES2017/tree/03_drf)
+
+```
+$ git checkout 03_drf
+$ docker-compose stop
+$ docker-compose build sysgate
+$ docker-compose up -d
+$ docker-compose exec sysgate python manage.py collectstatic --noinput
+```
 
 ### Contacta conmigo
 
