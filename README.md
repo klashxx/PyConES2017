@@ -37,7 +37,7 @@ Branch: [`01_auth`](https://github.com/klashxx/PyConES2017/tree/01_auth)
 
 ```
 $ git clone https://github.com/klashxx/PyConES2017.git sysgate
-$ cd sysgate
+$ cd sysgate/
 $ git checkout 01_auth
 $ docker-compose up -d
 $ docker-compose exec sysgate python manage.py migrate
@@ -54,7 +54,7 @@ Branch: [`02_apps`](https://github.com/klashxx/PyConES2017/tree/02_apps)
 
 ```
 $ git checkout 02_apps
-$ docker-compose down
+$ docker-compose stop
 $ docker-compose build
 $ docker-compose up -d
 $ docker-compose exec sysgate python manage.py migrate
@@ -78,8 +78,8 @@ Mis perfiles online están [**aquí**](https://klashxx.github.io/about), no te c
 [license-svg]: https://img.shields.io/badge/license-MIT-blue.svg
 [license-url]: https://opensource.org/licenses/MIT
 
-[asciicast-01_auth-png]: https://asciinema.org/a/133060.png
-[asciicast-01_auth-url]: https://asciinema.org/a/133060
+[asciicast-01_auth-png]: https://asciinema.org/a/133244.png
+[asciicast-01_auth-url]: https://asciinema.org/a/133244
 
-[asciicast-02_apps-png]: https://asciinema.org/a/133179.png
-[asciicast-02_apps-url]: https://asciinema.org/a/133179
+[asciicast-02_apps-png]: https://asciinema.org/a/133221.png
+[asciicast-02_apps-url]: https://asciinema.org/a/133221
