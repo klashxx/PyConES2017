@@ -3,7 +3,7 @@ from rest_framework import routers
 
 from . import views
 
-router = routers.DefaultRouter()
+router = routers.SimpleRouter()
 router.register(r'metricas', views.MetricasViewSet, 'metricas')
 
 app_name = 'metrics'
