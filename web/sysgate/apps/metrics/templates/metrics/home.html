@@ -1,14 +1,42 @@
-<h1>Metrics App</h1>
+{% extends 'base.html' %}
 
-<p>Bienvenid@ a la aplicación de métricas <strong>{{request.user }}</strong></p>
+{% load static %}
 
-<p>Disponibles:</p>
+{% block extrajs %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.min.js"></script>
+{% endblock %}
 
-<table style="border: 1px solid black;">
-{% for metrica in metricas %}
-  <tr>
-    <td>{{ metrica.nombre }}</td>
-    <td>{{ metrica.tipo }}</td>
-  </tr>
-{% endfor %}
-</table>
+{% block content %}
+
+<div id="container" class="container">
+  <table>
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>Title</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr v-for="metrica in metricas">
+        <td>[[ metrica.nombre ]]</td>
+        <td>[[ metrica.tipo ]]</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<script>
+  var v = new Vue({
+    delimiters: ['[[', ']]'],
+    el: '#container',
+    data: {
+      metricas: []
+    },
+    mounted: function(){
+      $.get('/metrics/api/v1/metricas/', function(data){
+        v.metricas = data;
+      })}
+  })
+</script>
+
+{% endblock content %}
