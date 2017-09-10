@@ -22,6 +22,8 @@ Ejemplo de filtrado por [*tipo*][metricas-drf-filter].
 
 Abre la aplicación [*métricas*][metricas] que ahora se alimenta directamente de la *API REST*.
 
+Al finalizar pasa a la siguiente [*rama*](https://github.com/klashxx/PyConES2017/tree/04_permissions).
+
 [asciicast-03_drf-png]: https://asciinema.org/a/133252.png
 [asciicast-03_drf-url]: https://asciinema.org/a/133252
 
