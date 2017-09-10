@@ -1,5 +1,6 @@
 django
 djangorestframework
+django-crispy-forms
 dj_database_url
 python-decouple
 psycopg2
