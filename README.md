@@ -10,6 +10,7 @@ $ git checkout 05_frontend
 $ docker-compose stop
 $ docker-compose build sysgate
 $ docker-compose up -d
+$ docker-compose exec sysgate python manage.py collectstatic --noinput
 ```
 
 [localhost]: http://0.0.0.0/
