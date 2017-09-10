@@ -87,6 +87,10 @@ $ docker-compose exec sysgate python manage.py collectstatic --noinput
 
 Apunta el *browser* sobre la interfaz de consulta de [*DRF*][metricas-drf] para visualizar la *API* que extrae los datos almacenados en el modelo [`Metrica`](https://github.com/klashxx/PyConES2017/blob/03_drf/web/sysgate/apps/metrics/models.py).
 
+Ejemplo de filtrado por [*tipo*][metricas-drf-filter].
+
+Abre la aplicación [*métricas*][metricas] que ahora se alimenta directamente de la *API REST*.
+
 ### Contacta conmigo
 
 Mis perfiles online están [**aquí**](https://klashxx.github.io/about), no te cortes ... :godmode:
@@ -111,4 +115,6 @@ Mis perfiles online están [**aquí**](https://klashxx.github.io/about), no te c
 [asciicast-03_drf-url]: https://asciinema.org/a/133252
 
 [localhost]: http://0.0.0.0/
+[metricas]: http://0.0.0.0/metrics/
 [metricas-drf]: http://0.0.0.0/metrics/api/v1/metricas/
+[metricas-drf-filter]: http://0.0.0.0/metrics/api/v1/metricas/?tipo=d

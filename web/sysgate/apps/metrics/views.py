@@ -1,3 +1,5 @@
+import requests
+
 from django.shortcuts import render
 from django.views.generic import View
 from rest_framework import viewsets
@@ -9,10 +11,10 @@ from .serializers import SerializerMetricas
 
 class Home(View):
     def get(self, request, *args, **kwargs):
-        metricas = Metrica.objects.all().order_by('tipo')
+        r = requests.get('http://sysgate:8000/metrics/api/v1/metricas/')
         return render(request,
                       'metrics/home.html',
-                      context={'metricas': metricas})
+                      context={'metricas': r.json()})
 
 
 class MetricasViewSet(viewsets.ModelViewSet):
@@ -21,11 +23,11 @@ class MetricasViewSet(viewsets.ModelViewSet):
     filter_backends = (OrderingFilter, SearchFilter,)
     search_fields = ('tipo',)
 
-
     def get_queryset(self):
-        queryset = Metrica.objects.all()
+        queryset = Metrica.objects.all().order_by('tipo')
         tipo = self.request.query_params.get('tipo', None)
 
         if tipo is not None:
             queryset = queryset.filter(tipo=tipo)
+
         return queryset

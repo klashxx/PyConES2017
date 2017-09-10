@@ -4,4 +4,5 @@ dj_database_url
 python-decouple
 psycopg2
 unipath
+requests
 gunicorn
