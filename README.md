@@ -44,7 +44,7 @@ $ docker-compose exec sysgate python manage.py createsuperuser
 
 [![Usuarios][asciicast-01_auth-png]][asciicast-01_auth-url]
 
-Apunta tu navegador al [localhost][localhost], registra un usuario y prueba las diferentes opciones de *autencitación*.
+Apunta tu navegador al [localhost][localhost], registra un usuario y prueba las diferentes opciones de *autenticación*.
 
 ### Contacta conmigo
 
