@@ -126,6 +126,11 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+GR_AUTH_METRICS = {
+    'GET': ['pycones_gr'],
+    'PUT': ['pycones_gr'],
+}
+
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 

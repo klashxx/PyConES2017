@@ -1,5 +1,6 @@
 import requests
 
+from django.conf import settings
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 from django.utils.decorators import method_decorator
@@ -7,6 +8,7 @@ from django.views.generic import View
 from rest_framework import viewsets
 from rest_framework.filters import OrderingFilter, SearchFilter
 from rest_framework.permissions import IsAuthenticated
+from sysgate.apps.core.permissions import EsAdminOTienePermisosPorGrupo
 
 from .models import Metrica
 from .serializers import SerializerMetricas
@@ -22,7 +24,8 @@ class Home(View):
 
 
 class MetricasViewSet(viewsets.ModelViewSet):
-    permission_classes = (IsAuthenticated,)
+    grupos_autorizados = settings.GR_AUTH_METRICS
+    permission_classes = (IsAuthenticated, EsAdminOTienePermisosPorGrupo,)
     serializer_class = SerializerMetricas
     http_method_names = ['get']
     filter_backends = (OrderingFilter, SearchFilter,)
