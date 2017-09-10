@@ -6,6 +6,7 @@ from django.utils.decorators import method_decorator
 from django.views.generic import View
 from rest_framework import viewsets
 from rest_framework.filters import OrderingFilter, SearchFilter
+from rest_framework.permissions import IsAuthenticated
 
 from .models import Metrica
 from .serializers import SerializerMetricas
@@ -21,6 +22,7 @@ class Home(View):
 
 
 class MetricasViewSet(viewsets.ModelViewSet):
+    permission_classes = (IsAuthenticated,)
     serializer_class = SerializerMetricas
     http_method_names = ['get']
     filter_backends = (OrderingFilter, SearchFilter,)
