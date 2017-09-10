@@ -20,6 +20,8 @@ La apariencia de la web cambia totalmente al aplicar [*Bootstrap*][bootstrap] co
 
 El [template][metrics-template] de la aplicación métricas habla directamente mediante [*jQuery*][jquery-get] con la [*API*][metricas-drf] extrae los datos y los renderiza mediante [*Vue*][vue-js].
 
+Tómate tu tiempo para *testear* los *templates*, cuando termines pasa a la siguiente [*rama*](https://github.com/klashxx/PyConES2017/tree/06_tricks).
+
 [localhost]: http://0.0.0.0/
 [asciicast-05_frontend-png]: https://asciinema.org/a/137086.png
 [asciicast-05_frontend-url]: https://asciinema.org/a/137086
