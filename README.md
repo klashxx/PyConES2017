@@ -18,7 +18,7 @@ $ docker-compose exec sysgate python manage.py collectstatic --noinput
 
 La apariencia de la web cambia totalmente al aplicar [*Bootstrap*][bootstrap] como se puede comprobar en cualquiera de sus [vistas][localhost].
 
-El[template][metrics-template] de la aplicación métricas habla directamente mediante [*jQuery*][jquery-get] con la [*API*][metricas-drf] extrae los datos y los renderiza mediante [*Vue*][vue-js].
+El [template][metrics-template] de la aplicación métricas habla directamente mediante [*jQuery*][jquery-get] con la [*API*][metricas-drf] extrae los datos y los renderiza mediante [*Vue*][vue-js].
 
 [localhost]: http://0.0.0.0/
 [asciicast-05_frontend-png]: https://asciinema.org/a/137086.png
