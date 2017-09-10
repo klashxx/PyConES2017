@@ -46,6 +46,8 @@ $ docker-compose exec sysgate python manage.py createsuperuser
 
 [![usuarios][asciicast-01_auth-png]][asciicast-01_auth-url]
 
+Apunta tu navegador al [localhost][localhost], registra un usuario y prueba las diferentes opciones de *autenticación*.
+
 ### 02. Aplicaciones
 
 #### Instalación
@@ -62,6 +64,8 @@ $ docker-compose exec sysgate python manage.py loaddata sysgate/fixtures/metrics
 ```
 
 [![usuarios][asciicast-02_apps-png]][asciicast-02_apps-url]
+
+Abre [localhost][localhost], *logeate* con el usuario creado en [`01_auth`](https://github.com/klashxx/PyConES2017/tree/01_auth) y accede a la aplicación *Métricas*.
 
 ### Contacta conmigo
 
@@ -83,3 +87,5 @@ Mis perfiles online están [**aquí**](https://klashxx.github.io/about), no te c
 
 [asciicast-02_apps-png]: https://asciinema.org/a/133221.png
 [asciicast-02_apps-url]: https://asciinema.org/a/133221
+
+[localhost]: http://0.0.0.0/
