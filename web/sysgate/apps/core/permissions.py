@@ -3,16 +3,21 @@ from django.core.exceptions import ObjectDoesNotExist
 from rest_framework.permissions import BasePermission
 
 
-def esta_en_grupo(user, grupo):
+def super_o_esta_en_grupo(user, grupo):
     """
     Devuelve `True` si un usuario pertenece a un grupo.
     """
 
-    try:
-        return Group.objects.get(
-            name=grupo).user_set.filter(id=user.id).exists()
-    except ObjectDoesNotExist:
+    if not user.is_authenticated():
         return False
+
+    if user.is_superuser:
+        return True
+
+    if user.groups.filter(name=grupo).exists():
+        return True
+
+    return False
 
 
 class EsSuperOTienePermisosPorGrupo(BasePermission):
@@ -22,11 +27,8 @@ class EsSuperOTienePermisosPorGrupo(BasePermission):
 
     def has_permission(self, request, view):
 
-        if request.user and request.user.is_superuser:
-            return True
-
         grupos_autorizados_mapping = getattr(view, 'grupos_autorizados', {})
         grupos_autorizados = grupos_autorizados_mapping.get(request.method, [])
 
-        return any([esta_en_grupo(request.user, grupo)
+        return any([super_o_esta_en_grupo(request.user, grupo)
                     for grupo in grupos_autorizados])
