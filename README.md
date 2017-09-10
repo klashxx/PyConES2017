@@ -42,7 +42,9 @@ $ docker-compose exec sysgate python manage.py migrate
 $ docker-compose exec sysgate python manage.py createsuperuser
 ```
 
-[![usuarios][asciicast-01_auth-png]][asciicast-01_auth-url]
+[![Usuarios][asciicast-01_auth-png]][asciicast-01_auth-url]
+
+Apunta tu navegador al [localhost][localhost], registra un usuario y prueba las diferentes opciones de *autencitación*.
 
 ### Contacta conmigo
 
@@ -61,3 +63,5 @@ Mis perfiles online están [**aquí**](https://klashxx.github.io/about), no te c
 
 [asciicast-01_auth-png]: https://asciinema.org/a/133244.png
 [asciicast-01_auth-url]: https://asciinema.org/a/133244
+
+[localhost]: http://0.0.0.0/
