@@ -19,6 +19,8 @@ $ docker-compose exec sysgate python manage.py loaddata sysgate/fixtures/metrics
 
 Abre [localhost][localhost], *logeate* con el usuario creado en [`01_auth`](https://github.com/klashxx/PyConES2017/tree/01_auth) y accede a la aplicación *Métricas*.
 
+Cuando termines las pruebas continúa por [*aquí*](https://github.com/klashxx/PyConES2017/tree/03_drf).
+
 [asciicast-02_apps-png]: https://asciinema.org/a/133221.png
 [asciicast-02_apps-url]: https://asciinema.org/a/133221
 
