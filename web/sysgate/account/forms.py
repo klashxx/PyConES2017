@@ -1,3 +1,5 @@
+from crispy_forms.helper import FormHelper
+from crispy_forms.layout import Submit
 from django import forms
 from django.contrib.auth import forms as django_forms
 from django.contrib.auth.forms import UserCreationForm
@@ -19,6 +21,14 @@ class LoginForm(django_forms.AuthenticationForm):
 
 class RegistroForm(UserCreationForm):
     email = forms.EmailField(max_length=254, help_text='Debe ser valído')
+
+    def __init__(self, *args, **kwargs):
+        """Initiate form with Crispy Form's FormHelper."""
+        super(RegistroForm, self).__init__(*args, **kwargs)
+        self.helper = FormHelper()
+
+        # Add 'Submit' button
+        self.helper.add_input(Submit('submit', 'Registrar'))
 
     class Meta:
         model = User
