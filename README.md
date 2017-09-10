@@ -27,7 +27,7 @@ Podemos observar como unicamente podemos consultar estos datos *logeandonos* con
 
 En el `views.py` se diferencia la gestión de permisos del acceso a la vista y del *viewset*.
 
-Sin embargo `requests` no tiene acceso a los datos de contexto necesario para acceder a la password de sesión, por lo que no resulta practico usar este modulo para extraer los datos de la API, el lugar natural para esto es el *template* como veremos en el próximo paso.
+Sin embargo `requests` no tiene acceso a los datos de contexto necesario para acceder a la password de sesión, por lo que no resulta practico usar este modulo para extraer los datos de la API, el lugar natural para esto es el *template* como veremos en el próximo paso [`05_frontend`](https://github.com/klashxx/PyConES2017/tree/05_frontend).
 
 [asciicast-04_permissions-png]: https://asciinema.org/a/vwUNgut3NchCKmeO3VKqALqFq.png
 [asciicast-04_permissions-url]: https://asciinema.org/a/vwUNgut3NchCKmeO3VKqALqFq
