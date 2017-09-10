@@ -29,6 +29,8 @@ En cada rama se detallan las instrucciones de instalación.
 
 [03](#drf). DRF
 
+[04](#permissions). Permisos
+
 <br>
 
 ### 01. Usuarios
@@ -48,6 +50,8 @@ $ docker-compose exec sysgate python manage.py createsuperuser
 
 [![usuarios][asciicast-01_auth-png]][asciicast-01_auth-url]
 
+#### Uso
+
 Apunta tu navegador al [localhost][localhost], registra un usuario y prueba las diferentes opciones de *autenticación*.
 
 ### 02. Aplicaciones
@@ -59,13 +63,15 @@ Branch: [`02_apps`](https://github.com/klashxx/PyConES2017/tree/02_apps)
 ```
 $ git checkout 02_apps
 $ docker-compose stop
-$ docker-compose build
+$ docker-compose build sysgate
 $ docker-compose up -d
 $ docker-compose exec sysgate python manage.py migrate
 $ docker-compose exec sysgate python manage.py loaddata sysgate/fixtures/metrics.metrica.json
 ```
 
 [![apps][asciicast-02_apps-png]][asciicast-02_apps-url]
+
+#### Uso
 
 Abre [localhost][localhost], *logeate* con el usuario creado en [`01_auth`](https://github.com/klashxx/PyConES2017/tree/01_auth) y accede a la aplicación *Métricas*.
 
@@ -85,11 +91,26 @@ $ docker-compose exec sysgate python manage.py collectstatic --noinput
 
 [![drf][asciicast-03_drf-png]][asciicast-03_drf-url]
 
+#### Uso
+
 Apunta el *browser* sobre la interfaz de consulta de [*DRF*][metricas-drf] para visualizar la *API* que extrae los datos almacenados en el modelo [`Metrica`](https://github.com/klashxx/PyConES2017/blob/03_drf/web/sysgate/apps/metrics/models.py).
 
 Ejemplo de filtrado por [*tipo*][metricas-drf-filter].
 
 Abre la aplicación [*métricas*][metricas] que ahora se alimenta directamente de la *API REST*.
+
+### 04. Permisos
+
+#### Instalación
+
+Branch: [`04_permissions`](https://github.com/klashxx/PyConES2017/tree/04_permissions)
+
+```
+$ git checkout 04_permissions
+$ docker-compose stop
+$ docker-compose build sysgate
+$ docker-compose up -d
+```
 
 ### Contacta conmigo
 
