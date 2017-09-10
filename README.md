@@ -1,6 +1,3 @@
-
-# :warning: WARNING: WORK IN PROGRESS :warning:
-
 ### 01. Usuarios
 
 #### Instalación
