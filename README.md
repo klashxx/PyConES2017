@@ -48,6 +48,8 @@ $ docker-compose exec sysgate python manage.py createsuperuser
 
 [![usuarios][asciicast-01_auth-png]][asciicast-01_auth-url]
 
+#### Uso
+
 Apunta tu navegador al [localhost][localhost], registra un usuario y prueba las diferentes opciones de *autenticación*.
 
 ### 02. Aplicaciones
@@ -67,6 +69,8 @@ $ docker-compose exec sysgate python manage.py loaddata sysgate/fixtures/metrics
 
 [![apps][asciicast-02_apps-png]][asciicast-02_apps-url]
 
+#### Uso
+
 Abre [localhost][localhost], *logeate* con el usuario creado en [`01_auth`](https://github.com/klashxx/PyConES2017/tree/01_auth) y accede a la aplicación *Métricas*.
 
 ### 03. DRF
@@ -84,6 +88,8 @@ $ docker-compose exec sysgate python manage.py collectstatic --noinput
 ```
 
 [![drf][asciicast-03_drf-png]][asciicast-03_drf-url]
+
+#### Uso
 
 Apunta el *browser* sobre la interfaz de consulta de [*DRF*][metricas-drf] para visualizar la *API* que extrae los datos almacenados en el modelo [`Metrica`](https://github.com/klashxx/PyConES2017/blob/03_drf/web/sysgate/apps/metrics/models.py).
 
