@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+      <div class="row">
+      <div class="col-md-5  toppad  pull-right col-md-offset-3 ">
+       <br>
+      </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
+          <div class="panel panel-info" style="border-color: #36BA92;">
+            <div class="panel-heading" style="background: #36BA92; color: white; border-color: #268466;">
+              <h3 class="panel-title">{{ usuario.first_name}} {{ usuario.last_name}}</h3>
+              <div style="float:right;font-size: 80%; position: relative; top:-10px; "><a href="{% url 'account:password_change' %}" style="color: white;">¿Cambiar password?</a></div>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+
+                <div class=" col-md-9 col-lg-9 ">
+                  <table class="table table-user-information">
+                    <tbody>
+                      <tr>
+                        <td>Usuario</td>
+                        <td>{{ usuario.username }}</td>
+                      </tr>
+
+                      <tr>
+                        <td>Último acceso</td>
+                        <td>{{ usuario.last_login }}</td>
+                      </tr>
+
+                      <tr>
+                        <td>Aplicaciones</td>
+                        <td>
+                            {% if not usuario.groups.all %}
+                              Sin aplicaciones registradas
+                            {% else %}
+                              <table>
+                                  <tbody>
+                                      {% for app in usuario.groups.all %}
+                                        <tr><td>{{ app }}</td></tr>
+                                      {% endfor %}
+                                  </tbody>
+                              </table>
+                            {% endif %}
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>Email</td>
+                        <td><a href="mailto:{{ usuario.email}}">{{ usuario.email }}</a></td>
+                      </tr>
+
+                      <tr>
+                        <td>Teléfono</td>
+                        {% if usuario.telefono %}
+                           <td>{{ usuario.telefono }}</td>
+                        {% else %}
+                           <td>No registrado</td>
+                        {% endif %}
+                      </tr>
+
+                      <tr>
+                        <td>Ciudad</td>
+                        {% if usuario.ciudad %}
+                           <td>{{ usuario.ciudad }}</td>
+                        {% else %}
+                           <td>No registrada</td>
+                        {% endif %}
+                      </tr>
+
+                      <tr>
+                        <td>Staff</td>
+                        {% if usuario.is_staff %}
+                          <td><strong>SI</strong></td>
+                        {% else %}
+                          <td>No</td>
+                        {% endif %}
+                      </tr>
+
+                      <tr>
+                        <td>Superuser</td>
+                        {% if usuario.is_superuser %}
+                          <td><strong>SI</strong></td>
+                        {% else %}
+                          <td>No</td>
+                        {% endif %}
+                      </tr>
+
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+{% endblock content %}

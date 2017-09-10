@@ -1,18 +1,16 @@
-<h2>Registro</h2>
+{% extends "base.html" %}
 
-<form method="post">
-  {% csrf_token %}
-  {% for field in form %}
-    <p>
-      {{ field.label_tag }}<br>
-      {{ field }}
-      {% if field.help_text %}
-        <small style="color: grey">{{ field.help_text }}</small>
-      {% endif %}
-      {% for error in field.errors %}
-        <p style="color: red">{{ error }}</p>
-      {% endfor %}
-    </p>
-  {% endfor %}
-  <button type="submit">Enviar</button>
-</form>
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+
+<div class="container col-xs-offset-2 col-xs-8
+                      col-sm-offset-2 col-sm-8
+                      col-md-offset-3 col-md-5
+                      col-lg-offset-3 col-lg-5">
+{% crispy form %}
+
+{% endblock %}
+
+{% block footer %}{% endblock %}

@@ -1,13 +1,32 @@
-<h1>SYSGATE</h1>
+{% extends 'base.html' %}
 
-{% if user.is_authenticated %}
-  <p>Bienvenido al portal: <strong>{{request.user }}</strong></p>
-  <h3>Aplicaciones disponibles</h3>
-  <a href="{% url 'metrics:home' %}"><button>Métricas</button></a>
+{% load core_tags %}
+
+{% block content %}
+
+<div class="container">
+  <img src="/static/img/logo_pycones17.png" class="center-block">
   <br>
-{% else %}
-  <p>Hola! Ser misterioso</p>
-{% endif %}
 
-<br>
-<a href="{% url 'account:home' %}"><button>Gestión cuentas</button></a>
+  {% if request.user|en_grupo:"pycones_gr" or user.is_superuser %}
+    <div class="jumbotron container-fluid">
+     <h1>Métricas</h1>
+      <p><a class="btn btn-lg btn-success" href="{% url 'metrics:home' %}" role="button">Acceder</a></p>
+    </div>
+  {% endif %}
+
+  {% if not user.is_authenticated %}
+    <div class="alert alert-warning alert-dismissable col-md-6 col-md-offset-3" align="center" role="alert">
+      <i class="fa fa-info-circle" aria-hidden="true"></i>
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      Inicie sesión para acceder al Dashboard
+    </div>
+  {% elif request.user|sin_grupos and not user.is_superuser %}
+    <div class="alert alert-danger col-md-6 col-md-offset-3" align="center" role="alert">
+      <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+      <strong>No existen aplicaciones registradas a su Usuario</strong>
+    </div>
+  {% endif %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,142 @@
+{% load i18n static %}
+<!DOCTYPE html>
+<link rel="shortcut icon" type="image/png" href="{% static "img/favicon.ico" %}"/>
+{% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
+<html lang="{{ LANGUAGE_CODE|default:"es-es" }}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
+<head>
+<title>SysGate</title>
+<!-- Fuentes -->
+<link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans|Rubik" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<!-- JS -->
+<script
+src="https://code.jquery.com/jquery-3.2.1.min.js"
+integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+{% block extrajs %}{% endblock %}
+<!-- CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="{% block stylesheet %}{% static "css/base.css" %}{% endblock %}" />
+{% block extrastyle %}{% endblock %}
+{% block extrahead %}{% endblock %}
+{% block blockbots %}<meta name="robots" content="NONE,NOARCHIVE" />{% endblock %}
+</head>
+
+<body class="{% block bodyclass %}{% endblock %}"
+  data-admin-utc-offset="{% now "Z" %}">
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-custom navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button"
+                  class="navbar-toggle collapsed"
+                  data-toggle="collapse"
+                  data-target="#navbar"
+                  aria-expanded="false"
+                  aria-controls="navbar">
+            <span class="sr-only">Desactivar Navegación</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" rel="home" href="{% url 'core:home' %}" title="SysGate">SysGate</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li>{% if not user.is_staff %}
+                  <a href="#">Contacto</a>
+                {% endif %}
+            </li>
+          </ul>
+          <ul class="nav navbar-nav pull-right">
+                {% if user.is_authenticated %}
+                    <li class=" dropdown"><a href="#"
+                                             class="dropdown-toggle active"
+                                             data-toggle="dropdown"
+                                             role="button"
+                                             aria-haspopup="true"
+                                             aria-expanded="false">
+                                             {% firstof user.get_short_name user.get_username %}
+                                             <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            {% if user.is_staff %}
+                              <li class=""><a href="{% url 'admin:index' %}">Administración</a></li>
+                            {% endif %}
+                            <li><a href="{% url 'account:profile' %}">Mi Cuenta</a></li>
+                        </ul>
+                    </li>
+                {% endif %}
+                {% if not user.is_authenticated %}
+                  <li class="">
+                    <a href="{% url 'account:login' %}" aria-label="Login usuario">
+                      <i class="fa fa-user-o fa-2x" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                {% else %}
+                  <li class="">
+                    <a href="{% url 'account:logout' %}" aria-label="Logout usuario">
+                      <i class="fa fa-power-off fa-2x" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                {% endif %}
+            </ul>
+        </div>
+      </div>
+    </nav>
+
+    {% block breadcrumb %}
+    <div class="container">
+        <div class="row">
+            <div class="btn-group btn-breadcrumb">
+                <a href="{% url 'core:home' %}"
+                   class="btn btn-default">
+                   <i class="glyphicon glyphicon-home"></i>
+                </a>
+                  {% for bread in breads %}
+                    <a href="{{ bread.full_path }}" class="btn btn-default">{{ bread.path }}</a>
+                  {% endfor %}
+
+            </div>
+        </div>
+    </div>
+    {% endblock breadcrumb %}
+
+   {% block messages %}
+       {% if messages %}
+          <div class="container">
+          {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} alert-dismissable fade in col-md-6 col-md-offset-3" align="center" role="alert">
+            <i class="fa fa-info-circle" aria-hidden="true"></i>
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            {{ message|capfirst }}
+            </div>
+          {% endfor %}
+          </div>
+       {% endif %}
+   {% endblock messages %}
+
+   <!-- Content -->
+   <div id="content" class="{% block coltype %}colM{% endblock %}">
+
+       {% block pretitle %}{% endblock %}
+       {% block content_title %}{% endblock %}
+       {% block content %}
+       {% block object-tools %}{% endblock %}
+       {{ content }}
+       {% endblock %}
+       {% block sidebar %}{% endblock %}
+       <br class="clear" />
+   </div>
+   <!-- END Content -->
+   {% block footer %}
+   <footer class="footer">
+     <div class="container">
+       <p class="text-muted" style="margin-top: 10px;">PyConES, Cáceres 2017</p>
+     </div>
+   </footer>
+   {% endblock %}
+
+</body>
+</html>
