@@ -48,6 +48,8 @@ $ docker-compose exec sysgate python manage.py createsuperuser
 
 [![usuarios][asciicast-01_auth-png]][asciicast-01_auth-url]
 
+Apunta tu navegador al [localhost][localhost], registra un usuario y prueba las diferentes opciones de *autenticación*.
+
 ### 02. Aplicaciones
 
 #### Instalación
@@ -65,6 +67,8 @@ $ docker-compose exec sysgate python manage.py loaddata sysgate/fixtures/metrics
 
 [![apps][asciicast-02_apps-png]][asciicast-02_apps-url]
 
+Abre [localhost][localhost], *logeate* con el usuario creado en [`01_auth`](https://github.com/klashxx/PyConES2017/tree/01_auth) y accede a la aplicación *Métricas*.
+
 ### 03. DRF
 
 #### Instalación
@@ -80,6 +84,8 @@ $ docker-compose exec sysgate python manage.py collectstatic --noinput
 ```
 
 [![drf][asciicast-03_drf-png]][asciicast-03_drf-url]
+
+Apunta el *browser* sobre la interfaz de consulta de [*DRF*][metricas-drf] para visualizar la *API* que extrae los datos almacenados en el modelo [`Metrica`](https://github.com/klashxx/PyConES2017/blob/03_drf/web/sysgate/apps/metrics/models.py).
 
 ### Contacta conmigo
 
@@ -103,3 +109,6 @@ Mis perfiles online están [**aquí**](https://klashxx.github.io/about), no te c
 
 [asciicast-03_drf-png]: https://asciinema.org/a/133252.png
 [asciicast-03_drf-url]: https://asciinema.org/a/133252
+
+[localhost]: http://0.0.0.0/
+[metricas-drf]: http://0.0.0.0/metrics/api/v1/metricas/
