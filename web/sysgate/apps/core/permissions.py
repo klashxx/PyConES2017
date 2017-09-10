@@ -15,7 +15,7 @@ def esta_en_grupo(user, grupo):
         return False
 
 
-class EsAdminOTienePermisosPorGrupo(BasePermission):
+class EsSuperOTienePermisosPorGrupo(BasePermission):
     """
     Se asegura de qu el usuario este en un grupo
     """
