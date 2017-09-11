@@ -11,3 +11,29 @@ $ docker-compose build sysgate
 $ docker-compose up -d
 $ docker-compose exec sysgate python manage.py collectstatic --noinput
 ```
+
+[![tricks][asciicast-06_tricks-png]][asciicast-06_tricks-url]
+
+#### Uso
+
+Unos últimos trucos par terminar nuestra [*demo*][localhost]:
+
+- Interfaz de navegación mediante [*breadcrumbs*][breadcrumbs-wikipedia].
+
+- Menú *Acerca de*.
+
+- Un nuevo [*admin*][admin-bootstrapped] más amigable basado en [*bootstrap*][bootstrap]. Recuerda acceder con usuario de administración.
+
+- Configuración del *logging*.
+
+- Uso de la [*toolbar*][toolbar].
+
+Juega el tiempo que quieras con la *web*, cuando termines puedes volver al [*master*](https://github.com/klashxx/PyConES2017/tree/master).
+
+[localhost]: http://0.0.0.0/
+[breadcrumbs-wikipedia]: https://es.wikipedia.org/wiki/Miga_de_pan_(inform%C3%A1tica)
+[bootstrap]: http://getbootstrap.com/
+[admin-bootstrapped]: http://0.0.0.0/admin/
+[toolbar]: https://django-debug-toolbar.readthedocs.io/en/stable/
+[asciicast-06_tricks-png]: https://asciinema.org/a/137215.png
+[asciicast-06_tricks-url]: https://asciinema.org/a/137215
