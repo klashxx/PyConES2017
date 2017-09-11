@@ -43,7 +43,7 @@ $ docker-compose exec sysgate python manage.py loaddata sysgate/fixtures/metrics
 $ docker-compose exec sysgate python manage.py collectstatic --noinput
 ```
 
-[![sysgate](https://asciinema.org/a/137226.png)](https://asciinema.org/a/137226)
+[![Sysgate][asciicast-master-png]][asciicast-master-url]
 
 :warning: **ATENCION**: Es posible que tengas que purgar la `BD` si antes optaste por la instalacion en fases: `rm -rf ~/data/postgresql`
 
@@ -58,5 +58,7 @@ $ docker-compose exec sysgate python manage.py collectstatic --noinput
 [git-branch]: https://git-scm.com/book/es/v1/Ramificaciones-en-Git-%C2%BFQu%C3%A9-es-una-rama%3F "¿Qué es una rama?"
 [repo-auth]: https://github.com/klashxx/PyConES2017/tree/01_auth "Django vs Sysadmin - 01_auth"
 [localhost]: http://0.0.0.0/
+[asciicast-master-png]: https://asciinema.org/a/137226.png
+[asciicast-master-url]: https://asciinema.org/a/137226
 [license-svg]: https://img.shields.io/badge/license-MIT-blue.svg
 [license-url]: https://opensource.org/licenses/MIT
