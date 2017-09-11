@@ -16,13 +16,13 @@ $ docker-compose exec sysgate python manage.py collectstatic --noinput
 
 #### Uso
 
-Unos últimos trucos par terminar nuestra [*demo*][localhost]:
+Unos últimos trucos para terminar nuestra [*demo*][localhost]:
 
 - Interfaz de navegación mediante [*breadcrumbs*][breadcrumbs-wikipedia].
 
 - Menú *Acerca de*.
 
-- Un nuevo [*admin*][admin-bootstrapped] más amigable basado en [*bootstrap*][bootstrap]. Recuerda acceder con usuario de administración.
+- Un nuevo [*admin*][admin-bootstrapped] más amigable basado en [*bootstrap*][bootstrap]. :point_right: Recuerda acceder con usuario de administración.
 
 - Configuración del *logging*.
 
