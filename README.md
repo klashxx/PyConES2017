@@ -25,9 +25,11 @@ Las instrucciones detalladas se pueden encontrar en los `README.md` de las *bran
 
 Cada una de las ramas es _usable per se_ y demuestran cómo implementar una funcionalidad concreta, además son **incrementales**, es decir, las modificaciones realizadas en una `branch` son *reusadas* en la siguiente.
 
-¡Listo! ¡Vamos con primer [*paso*][repo-auth]!
+## :point_right: ¡Listo! ¡Vamos con primer [*paso*][repo-auth]! :point_left:
 
-## :warning: Para los impacientes :warning:
+<br>
+
+### :warning: Para los impacientes :warning:
 
 Aunque la **experiencia ideal de aprendizaje la proporciona la instalación por fases**, también es posible la instalación *en un paso* siguiendo estas instrucciones:
 
