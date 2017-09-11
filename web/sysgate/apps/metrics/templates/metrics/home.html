@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block extrajs %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.min.js"></script>
+{% endblock %}
+
+{% block content %}
+
+<div id="container" class="container">
+  <table>
+    <thead>
+      <tr>
+        <th>Métrica</th>
+        <th>Tipo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr v-for="metrica in metricas">
+        <td>[[ metrica.nombre ]]</td>
+        <td>[[ metrica.long_tipo ]]</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<script>
+  var v = new Vue({
+    delimiters: ['[[', ']]'],
+    el: '#container',
+    data: {
+      metricas: []
+    },
+    mounted: function(){
+      $.get('/metrics/api/v1/metricas/', function(data){
+        v.metricas = data;
+      })}
+  })
+</script>
+
+{% endblock content %}

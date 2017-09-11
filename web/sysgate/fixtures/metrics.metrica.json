@@ -1,0 +1,82 @@
+[
+{
+  "model": "metrics.metrica",
+  "pk": "IDLE",
+  "fields": {
+    "tipo": "p",
+    "alta": "2017-08-13T10:12:39.667Z",
+    "modificacion": "2017-08-13T10:12:39.663Z",
+    "descripcion": "Time spent doing nothing"
+  }
+},
+{
+  "model": "metrics.metrica",
+  "pk": "IO",
+  "fields": {
+    "tipo": "n",
+    "alta": "2017-08-13T10:18:11.294Z",
+    "modificacion": "2017-08-13T10:18:11.290Z",
+    "descripcion": "Return system-wide network I/O statistics as a named tuple including the following attributes:\r\n\r\nbytes_sent: number of bytes sent\r\nbytes_recv: number of bytes received\r\npackets_sent: number of packets sent\r\npackets_recv: number of packets received"
+  }
+},
+{
+  "model": "metrics.metrica",
+  "pk": "READ",
+  "fields": {
+    "tipo": "d",
+    "alta": "2017-08-13T10:15:09.516Z",
+    "modificacion": "2017-08-13T10:15:09.512Z",
+    "descripcion": "Number of reads"
+  }
+},
+{
+  "model": "metrics.metrica",
+  "pk": "SYSTEM",
+  "fields": {
+    "tipo": "p",
+    "alta": "2017-08-13T10:12:12.184Z",
+    "modificacion": "2017-08-13T10:12:12.178Z",
+    "descripcion": "Time spent by processes executing in kernel mode"
+  }
+},
+{
+  "model": "metrics.metrica",
+  "pk": "USAGE",
+  "fields": {
+    "tipo": "d",
+    "alta": "2017-08-13T10:14:22.458Z",
+    "modificacion": "2017-08-13T10:14:22.453Z",
+    "descripcion": "Disk usage statistics"
+  }
+},
+{
+  "model": "metrics.metrica",
+  "pk": "USER",
+  "fields": {
+    "tipo": "p",
+    "alta": "2017-08-13T10:11:09.873Z",
+    "modificacion": "2017-08-13T10:11:09.868Z",
+    "descripcion": "Time spent by normal processes executing in user mode."
+  }
+},
+{
+  "model": "metrics.metrica",
+  "pk": "USERS",
+  "fields": {
+    "tipo": "c",
+    "alta": "2017-08-13T10:21:19.015Z",
+    "modificacion": "2017-08-13T10:21:19.012Z",
+    "descripcion": "Return users currently connected on the system:\r\n\r\nuser: name of the user.\r\nterminal: tty or pseudo-tty associated with the user, if any, else None.\r\nhost: the host name associated with the entry, if any.\r\nstarted: the creation time as a floating point number expressed in seconds since the epoch."
+  }
+},
+{
+  "model": "metrics.metrica",
+  "pk": "WRITE",
+  "fields": {
+    "tipo": "d",
+    "alta": "2017-08-13T10:15:59.951Z",
+    "modificacion": "2017-08-13T10:15:59.947Z",
+    "descripcion": "Number of writes"
+  }
+}
+]
