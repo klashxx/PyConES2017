@@ -7,7 +7,7 @@ Branch: [`02_apps`](https://github.com/klashxx/PyConES2017/tree/02_apps)
 ```
 $ git checkout 02_apps
 $ docker-compose stop
-$ docker-compose build
+$ docker-compose build sysgate
 $ docker-compose up -d
 $ docker-compose exec sysgate python manage.py migrate
 $ docker-compose exec sysgate python manage.py loaddata sysgate/fixtures/metrics.metrica.json
