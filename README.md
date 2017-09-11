@@ -28,7 +28,7 @@ Unos últimos trucos para terminar nuestra [*demo*][localhost]:
 
 - Uso de la [*toolbar*][toolbar].
 
-Juega el tiempo que quieras con la *web*, cuando termines puedes volver al [*master*](https://github.com/klashxx/PyConES2017/tree/master).
+Juega el tiempo que quieras con la *web*, cuando termines puedes volver al [*master*](https://github.com/klashxx/PyConES2017#contacta-conmigo).
 
 [localhost]: http://0.0.0.0/
 [breadcrumbs-wikipedia]: https://es.wikipedia.org/wiki/Miga_de_pan_(inform%C3%A1tica)
