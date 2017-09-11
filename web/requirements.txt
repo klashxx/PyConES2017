@@ -3,6 +3,7 @@ djangorestframework
 django-crispy-forms
 django-bootstrap3
 django-admin-bootstrapped
+django-debug-toolbar
 dj_database_url
 python-decouple
 psycopg2
