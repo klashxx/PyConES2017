@@ -156,3 +156,44 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '[%(asctime)s] "%(levelname)s" [%(module)s] %(message)s',
+            'datefmt': '%d/%b/%Y %H:%M:%S',
+        },
+        'simple': {
+            'format': '%(levelname)s %(message)s'
+        },
+    },
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+            'formatter': 'verbose',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+            'level': config('LOGGER_LEVEL'),
+            'propagate': True,
+        },
+        'django.template': {
+            'handlers': ['console'],
+            'level': 'CRITICAL',
+        },
+        'django.db.backends': {
+            'handlers': ['console'],
+            'level': 'CRITICAL',
+        },
+        'sysgate': {
+            'handlers': ['console'],
+            'level': config('LOGGER_LEVEL'),
+            'propagate': True,
+            'formatter': 'verbose',
+        },
+    },
+}
