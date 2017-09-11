@@ -51,6 +51,17 @@ Abre tu navegador apuntando al [localhost][localhost] y prueba la aplicación.
 
 :warning: **ATENCION**: Es posible que tengas que purgar la `BD` si antes optaste por la instalacion en fases: `rm -rf ~/data/postgresql`
 
+## Contacta conmigo
+
+Mis perfiles online están [**aquí**](https://klashxx.github.io/about), no te cortes ... :godmode:
+
+<h6 align="center">
+<a href="https://2017.es.pycon.org/es/schedule/sysadmin-vs-django/">
+  <img src="https://github.com/klashxx/PyConES2017/blob/master/web/sysgate/static/img/logo_pycones17.png">
+</a></h6>
+<br>
+<h6 align="center">Made with :heart: in Almería, Spain.</h6>
+
 [pycones2017-home]: https://2017.es.pycon.org "PyConES 2017 - Cáceres"
 [dvs-agenda]: https://2017.es.pycon.org/es/schedule/sysadmin-vs-django/ "Django vs Sysadmin - PyConES 2017"
 [dvs-slides]: https://klashxx.github.io/slides/django/ "Django vs Sysadmin - Slides"
