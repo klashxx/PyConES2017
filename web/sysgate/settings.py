@@ -50,12 +50,14 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'django_admin_bootstrapped',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'bootstrap3',
     'crispy_forms',
     'rest_framework',
     'account',
@@ -106,6 +108,8 @@ WSGI_APPLICATION = 'sysgate.wsgi.application'
 DATABASES = {
     'default': dj_database_url.config(default=config('DATABASE_URL')),
 }
+
+DAB_FIELD_RENDERER = 'django_admin_bootstrapped.renderers.BootstrapFieldRenderer'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
