@@ -47,6 +47,8 @@ $ docker-compose exec sysgate python manage.py collectstatic --noinput
 
 [![Sysgate][asciicast-master-png]][asciicast-master-url]
 
+Abre tu navegador apuntando al [localhost][localhost] y prueba la aplicación.
+
 :warning: **ATENCION**: Es posible que tengas que purgar la `BD` si antes optaste por la instalacion en fases: `rm -rf ~/data/postgresql`
 
 [pycones2017-home]: https://2017.es.pycon.org "PyConES 2017 - Cáceres"
