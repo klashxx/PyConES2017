@@ -2,9 +2,15 @@
 SYSGATE URL Configuration
 """
 from django.conf import settings
-from django.conf.urls import include, url
+from django.conf.urls import (handler400, handler403, handler404, handler500,
+                              include, url)
 from django.contrib import admin
+from sysgate.apps.core.views import error_400, error_403, error_404, error_500
 
+handler400 = error_400
+handler403 = error_403
+handler404 = error_404
+handler500 = error_500
 
 urlpatterns = [
     url(r'^', include('apps.core.urls', namespace='core')),

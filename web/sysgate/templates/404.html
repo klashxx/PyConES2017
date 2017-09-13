@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block extrastyle %}
+<style>
+.container-error {
+    position: absolute;
+    top: 30%;
+}
+
+</style>
+{% endblock %}
+
+{% block content %}
+
+{% block breadcrumb %}{% endblock %}
+
+<div class="container-error col-md-5 col-md-offset-3 col-sm-8 col-sm-offset-1">
+   <div class="jumbotron  container-fluid">
+        <h1>
+            <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+            &nbsp;Página no encontrada&nbsp;
+            <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+        </h1>
+        <p class="lead">Puede que el vinculo esté desactualizado, que la página no exista o que se haya tecleado incorrectamente.</p>
+   </div>
+</div>
+
+{% endblock %}
