@@ -4,6 +4,7 @@ ENV PYTHONUNBUFFERED 1
 RUN mkdir /sysgate /config
 ADD ./requirements.txt /config/
 RUN pip3 install --no-cache-dir -r /config/requirements.txt
+RUN pip3 install --no-dependencies git+https://github.com/django-admin-bootstrapped/django-admin-bootstrapped.git
 ADD . /sysgate/
 WORKDIR /sysgate/
 ENV PYTHONPATH /sysgate/sysgate
