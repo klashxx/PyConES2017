@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block extrastyle %}
+<style>
+.container-error {
+    position: absolute;
+    top: 30%;
+}
+
+</style>
+{% endblock %}
+
+{% block content %}
+
+{% block breadcrumb %}{% endblock %}
+
+<div class="container-error col-md-5 col-md-offset-3 col-sm-8 col-sm-offset-1">
+   <div class="jumbotron  container-fluid">
+        <h1>
+            <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+            &nbsp;Internal Server Error&nbsp;
+            <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+        </h1>
+        <p class="lead">Se ha producido un error interno.  Por favor reintente la petición pasados unos minutos.</p>
+   </div>
+</div>
+
+{% endblock %}

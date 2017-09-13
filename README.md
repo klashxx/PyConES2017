@@ -55,12 +55,18 @@ Abre tu navegador apuntando al [localhost][localhost] y prueba la aplicación.
 
 Mis perfiles online están [**aquí**](https://klashxx.github.io/about), no te cortes ... :godmode:
 
+<<<<<<< HEAD
 <h6 align="center">
 <a href="https://2017.es.pycon.org/es/schedule/sysadmin-vs-django/">
   <img src="https://github.com/klashxx/PyConES2017/blob/master/web/sysgate/static/img/logo_pycones17.png">
 </a></h6>
 <br>
 <h6 align="center">Made with :heart: in Almería, Spain.</h6>
+=======
+- *Handlers* 400, 403, 404 y 500.
+
+Juega el tiempo que quieras con la *web*, cuando termines puedes volver al [*master*](https://github.com/klashxx/PyConES2017#contacta-conmigo).
+>>>>>>> 06_tricks
 
 [pycones2017-home]: https://2017.es.pycon.org "PyConES 2017 - Cáceres"
 [dvs-agenda]: https://2017.es.pycon.org/es/schedule/sysadmin-vs-django/ "Django vs Sysadmin - PyConES 2017"
