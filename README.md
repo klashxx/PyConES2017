@@ -3,6 +3,8 @@
 
 *Demo* que ilustrará la charla [*Sysadmin vs Django*](https://2017.es.pycon.org/es/schedule/sysadmin-vs-django/) en la [PyConES Cáceres 2017](http://2017.es.pycon.org/).
 
+Basado en el [post][blog-post] del mismo nombre.
+
 ## Pruébalo en tu equipo
 
 Todo el software se ha *dockerizado* de forma que la aplicación pueda levantarse independientemente del entorno del usuario.
@@ -64,6 +66,7 @@ Mis perfiles online están [**aquí**](https://klashxx.github.io/about), no te c
 
 [pycones2017-home]: https://2017.es.pycon.org "PyConES 2017 - Cáceres"
 [dvs-agenda]: https://2017.es.pycon.org/es/schedule/sysadmin-vs-django/ "Django vs Sysadmin - PyConES 2017"
+[blog-post]: https://klashxx.github.io/django-vs-sysadmin "Django vs Sysadmin Blog Post"
 [dvs-slides]: https://klashxx.github.io/slides/django/ "Django vs Sysadmin - Slides"
 [github]: https://github.com "GitHub"
 [asciinema]: https://asciinema.org/ "asciinema"
