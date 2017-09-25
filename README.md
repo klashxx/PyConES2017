@@ -1,9 +1,9 @@
 # :snake: Sysadmin vs Django
 [![][license-svg]][license-url]
 
-*Demo* que ilustrará la charla [*Sysadmin vs Django*](https://2017.es.pycon.org/es/schedule/sysadmin-vs-django/) en la [PyConES Cáceres 2017](http://2017.es.pycon.org/).
+*Demo* que ilustró la charla [*Sysadmin vs Django*](https://2017.es.pycon.org/es/schedule/sysadmin-vs-django/) en la [PyConES Cáceres 2017](http://2017.es.pycon.org/).
 
-Basado en este [post][blog-post], puedes encontrar [aquí][dvs-slides] las *slides* de la presentación.
+Basado en este [post][blog-post]. Puedes encontrar [aquí][dvs-slides] las *slides* de la presentación.
 
 ## Pruébalo en tu equipo
 
