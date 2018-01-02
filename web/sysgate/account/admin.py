@@ -1,19 +1,18 @@
 from django.contrib import admin
+from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from .models import User
 
 @admin.register(User)
-class UserAdmin(admin.ModelAdmin):
-    list_display = ('username',)
+class UserAdmin(BaseUserAdmin):
+    list_display = ('username', 'first_name', 'last_name', 'is_staff', )
     list_filter = ('username',)
-
-    fields = ('username',
-              ('first_name', 'last_name'),
-              'email',
-              'groups',
-              'user_permissions',
-              ('is_staff', 'is_active', ),
-              ('last_login', 'date_joined'),
-              ('direccion1', 'direccion2'),
-              'telefono',
-              ('ciudad', 'provincia',)
-              )
+    contact_fields = (
+        'direccion1',
+        'direccion2',
+        'ciudad',
+        'provincia',
+        'telefono',
+    )
+    fieldsets = BaseUserAdmin.fieldsets + (
+        ('Datos Contacto', {'fields': contact_fields}),
+    )
