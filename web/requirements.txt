@@ -1,11 +1,11 @@
-django==1.11.5
-djangorestframework==3.6.4
+django==1.11.28
+djangorestframework==3.9.1
 django-crispy-forms==1.6..1
 django-bootstrap3==9.0.0
 django-debug-toolbar==1.8
 dj_database_url==0.4.2
 python-decouple==3.1
-psycopg2==2.7.3.1
+psycopg2==2.8.4
 unipath==1.1
-requests==2.18.4
+requests==2.20.0
 gunicorn==19.7.1
